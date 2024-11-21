@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Блокнот для HTML-кода</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #fff;
+        }
+        header, section, footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Шапка */
+        header {
+            background: #1f1f1f;
+            color: #fff;
+            padding: 40px;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        /* Стили для кнопок */
+        .cta-button {
+            background: #0078d7;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background: #005ea5;
+        }
+
+        /* Черная пятница акция */
+        #black-friday-sale {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+        }
+        #black-friday-sale h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        #black-friday-sale p {
+            font-size: 1.2em;
+        }
+
+        /* Стили для таблицы с ценами */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #444;
+        }
+        td {
+            background-color: #333;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        .new-price {
+            font-size: 1.5em;
+            color: #ff5733;
+            font-weight: bold;
+        }
+
+        /* Отзывы */
+        #testimonials .testimonial {
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #444;
+        }
+        #testimonials blockquote {
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+        }
+        #testimonials cite {
+            font-size: 0.9em;
+            color: #bbb;
+        }
+        .reviewer-photo {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        /* Стили для формы обратной связи */
+        form {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            width: 60%;
+            margin: 20px auto;
+            text-align: left;
+        }
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #0078d7;
+            color: white;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #005ea5;
+        }
+
+        /* Стили для футера */
+        footer {
+            background: #1f1f1f;
+            color: #aaa;
+            padding: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        /* Стили для счетчика покупок */
+        #purchase-counter {
+            font-size: 1.5em;
+            color: #ddd;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Черная пятница акция -->
+    <section id="black-friday-sale">
+        <h2>Черная пятница — Скидки до 50%!</h2>
+        <p>Не упустите шанс! Получите скидку до 50% на все планы. Акция действует только до 30 ноября!</p>
+        <a href="#discount-table" class="cta-button">Смотреть скидки</a>
+    </section>
+
+    <!-- Шапка -->
+    <header>
+        <h1>AI Блокнот</h1>
+        <p>Умный блокнот для разработки HTML-кода</p>
+        <!-- Добавляем картинку demo.jpg -->
+        <img src="demo.jpg" alt="Демонстрация работы AI Блокнота" style="width: 80%; max-width: 600px; margin-top: 20px;">
+    </header>
+
+    <!-- Уникальное торговое предложение -->
+    <section id="utp">
+        <h2>Почему AI Блокнот?</h2>
+        <p>Создавайте HTML-код быстрее и проще с помощью встроенного искусственного интеллекта, который подскажет, исправит ошибки и предложит улучшения.</p>
+        <a href="#feedback" class="cta-button">Попробовать бесплатно</a>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="advantages">
+        <h2>Наши преимущества</h2>
+        <ul>
+            <li>Интеллектуальные подсказки и автодополнение</li>
+            <li>Автоматическое исправление ошибок</li>
+            <li>Интуитивно понятный интерфейс</li>
+            <li>Работает на всех устройствах</li>
+        </ul>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="testimonials">
+        <h2>Отзывы наших пользователей</h2>
+        <div class="testimonial">
+            <blockquote>
+                <p>"AI Блокнот помог мне сократить время на создание сайтов вдвое! Это действительно потрясающе!"</p>
+                <cite>- Алексей, веб-разработчик</cite>
+            </blockquote>
+            <img src="reviewer1.jpg" alt="Фото Алексея" class="reviewer-photo">
+        </div>
+        <div class="testimonial">
+            <blockquote>
+                <p>"Удобный интерфейс и отличные подсказки. Рекомендую всем, кто изучает HTML."</p>
+                <cite>- Мария, студент</cite>
+            </blockquote>
+            <img src="reviewer2.jpg" alt="Фото Марии" class="reviewer-photo">
+        </div>
+    </section>
+
+    <!-- Формы обратной связи -->
+    <section id="feedback">
+        <h2>Свяжитесь с нами</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Ваше сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <!-- Секцию с обновленными ценами -->
+    <section id="discount-table">
+        <h2>Специальные предложения для Черной пятницы</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>План</th>
+                    <th>Старая цена</th>
+                    <th>Новая цена с 50% скидкой</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>На 1 месяц</td>
+                    <td class="old-price">5 долларов</td>
+                    <td class="new-price">2.5 доллара</td>
+                </tr>
+                <tr>
+                    <td>На 1 год</td>
+                    <td class="old-price">45 долларов</td>
+                    <td class="new-price">22.5 доллара</td>
+                </tr>
+                <tr>
+                    <td>Пожизненный доступ</td>
+                    <td class="old-price">150 долларов</td>
+                    <td class="new-price">75 долларов</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+    <!-- Футер -->
+    <footer>
+        <p>© 2024 AI Блокнот. Все права защищены.</p>
+        <p>Уже купили 10000 пользователей!</p>
+        <p><a href="https://vk.com/onotibable" style="color: blue; text-decoration: underline;">Свяжитесь с нами напрямую</a></p>
+    </footer>
+</body>
+</html>
